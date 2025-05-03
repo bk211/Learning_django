@@ -1,0 +1,18 @@
+
+{% extends 'base/base.html' %}
+{% load static%}
+
+
+
+{% block 'title'%}
+<title> Welcome Home </title>
+{% endblock 'title' %}
+
+{% block 'body' %}
+<main>
+    <h1>{{ request.user.username}}</h1>
+</main>
+{% endblock %}
+
+{% block footer %}
+{% endblock footer %}
