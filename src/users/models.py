@@ -9,7 +9,7 @@ class Profile(models.Model):
     photo = models.ImageField(upload_to=user_directory_path, null=True)
     bio = models.CharField(max_length=140, blank=True)
     phone_number = models.CharField(max_length=22, blank=True)
-    location = models.OneToOneField('users.Location', on_delete=models.CASCADE, null=True)
+    location = models.OneToOneField('users.Location', on_delete=models.SET_NULL, null=True)
     
     def __str__(self) -> str:
         return f"{self.user.username}'s Profile"
